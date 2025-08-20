@@ -1,0 +1,17 @@
+/* carrosel */
+
+#carousel {
+   max-width: 1300px;
+   width: 90%;
+   margin: auto;
+   margin-block: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 30px;
+}
+
+.setaCarousel {
+   width: 32px;
+}

@@ -1,0 +1,204 @@
+/* !!!Layout principal!!! */
+
+/* Faz com que o main ocupe espaço full */
+main {
+  display: flex;
+  width: 100%;
+}
+
+/* Seção de filtros */
+.filtro {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* Seção de produtos */
+.produtos {
+  width: 80%;
+  padding: 20px;
+}
+
+/* !!!Responsividade!!! */
+
+@media (max-width: 768px) {
+
+  /* Ajusta o layout para telas menores */
+  main {
+    flex-direction: column;
+  }
+
+  .filtro,
+  .produtos {
+    width: 100%;
+  }
+}
+
+/* !!!Estilização dos Filtros!!! */
+
+/* Título "Filtros" */
+.tituloFiltros {
+  margin-bottom: 10%;
+  margin-top: 10%;
+  text-align: center;
+}
+
+/* Conjuntos de "algodão x" */
+.conjunto1filtroAlgodao,
+.conjunto2filtroAlgodao {
+  display: flex;
+  margin-left: 5%;
+}
+
+/* Cada "algodão x" */
+#filtroAlgodao {
+  background-color: rgb(177, 177, 177);
+  color: black;
+  border-radius: 5px;
+  padding: 3%;
+  font-weight: bold;
+  text-align: center;
+  margin: 3%;
+  width: 100%;
+}
+
+/* Barra de seleção de preço */
+.barraDeDinheiro {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.barraDeDinheiro label {
+  margin-right: 5px;
+}
+
+.barraDeDinheiro input[type="range"] {
+  margin-right: 10px;
+  flex: 1;
+}
+
+#valorRange {
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Seção de tipos de camisa (Tamanhos, Cores, Tecidos) */
+.selecaoTipoCamisa {
+  margin-top: 20px;
+}
+
+/* Cada "conjunto" de filtros (Tamanhos, Cores, Tecidos) */
+.filtroTamanho,
+.filtroCores,
+.filtroTecidos {
+  margin-bottom: 20px;
+}
+
+/* Títulos de cada grupo */
+.filtroTamanho h1,
+.filtroCores h1,
+.filtroTecidos h1 {
+  margin-left: 50px;
+  margin-bottom: 10%;
+}
+
+#selecaoPlusSize {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 50px;
+  margin-bottom: 5px;
+}
+
+#selecaoPlusSize p {
+  margin-left: 5px;
+}
+
+/* Botão filtrar */
+#botaoFiltrar {
+  margin: 20px 0px 0px 50px;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/* !!!Seção de Produtos!!! */
+
+/* Botões de categorias (Populares, Novos, Vintage) */
+.menuCategorias {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.categoriaBtn {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.categoriaBtn:hover {
+  background-color: #ddd;
+}
+
+.categoriaBtn.ativo {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Grid de produtos */
+.containerProdutos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card do produto */
+.cardProduto {
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* imagem do card do produto */
+.cardProduto img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* titulo do card do produto */
+.cardProduto h3 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+/* paragrafo do card do produto */
+.cardProduto p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Responsividade para o grid de produtos */
+
+@media (max-width: 992px) {
+  .containerProdutos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .containerProdutos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .containerProdutos {
+    grid-template-columns: 1fr;
+  }
+}
