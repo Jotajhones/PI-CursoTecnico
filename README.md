@@ -15,7 +15,7 @@ Projeto de loja online conteplando todas as areas estudadas no curso, analise de
    - Contempla o frontend para usuarios, a versão da loja acessivel para o cliente.
 - **Admin**
    - Contempla o frontend para administradores, fazerem controle de conteudo, e controle de usuarios.
-- ** Database**
+- **Database**
    - Esquemas do banco de dados utilizado no projeto.
 - **Screenshots**
    - Capturas de tela de todas as partes do projeto web.
