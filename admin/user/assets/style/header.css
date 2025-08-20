@@ -1,0 +1,447 @@
+#header {
+    background-color: black;
+    /* determinar cor de fundo preta*/
+    color: white;
+    /* determinar cor branca nas letras*/
+    text-align: center;
+    /* alinha título do cabeçalho*/
+    font-family: "Poppins", sans-serif;
+}
+
+#titulocabecalho a,
+#titulocabecalho a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+/* div do cabeçalho*/
+#cabecalho {
+    display: flex;
+    /* determinar flexiblidade para os blocos internos da div cabeçalho*/
+    flex-direction: row;
+    /* Alinhar em linhas oa divs internas*/
+    justify-content: right;
+    align-items: center;
+    /* colocar as divs internas na direita*/
+    padding: 30px;
+    /* estabelecer margem interna das div cabeçalho*/
+    gap: 200px;
+    width: 100%;
+}
+
+/* título do cabeçalho*/
+#cabecalho #titulocabecalho h1 {
+    font-family: 'Blank River', sans-serif;
+    /*determinando a fonte: 'fonteDotitulo' para o título do cabeçalho*/
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+/*input do tipo search da div searchBar interna da div cabeçalho*/
+#cabecalho #searchBar {
+    width: 300px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Input search*/
+#cabecalho #searchBar input[type='search'] {
+    position: absolute;
+    /*posição absoluta em relação a div searchBar*/
+    height: 100%;
+    /*Altura de 100%*/
+    width: 100%;
+    /*Largura de 100%*/
+    border: none;
+    /*sem borda no input*/
+    font-size: 10px;
+    /*Tamanho da letra*/
+    padding-left: 10px;
+    /*Espaçãmento em relação à esquerda*/
+    border-radius: 10px;
+    /*arredeondamento do input*/
+    padding: 15px;
+}
+
+/*Estlizando a lupa dentro do input*/
+#cabecalho #searchBar i {
+    position: absolute;
+    right: 5px;
+    font-size: 10px;
+    color: gray;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+/*ícones do cabeçalho*/
+#cabecalhoButtons img {
+    padding: 10px;
+    /*estabelecer tamanho das imagens*/
+    width: 50px;
+}
+
+/*Div da menu superior de header*/
+#menuSuperior {
+    color: rgb(238, 234, 234);
+    /*estabelecer cores brancas para as letras*/
+
+    /*estabelecer espaçamento interno da div #menuSuperio*/
+    border-top: 2px dashed;
+    /*estabelecer linha pontilhada para separar o menu do cabeçalho*/
+    white-space: nowrap;
+}
+
+/*Div para a organização das listas da div #menuSuperior */
+#menuSuperior ul {
+    display: flex;
+    /* estabelecer alinhamento flexível paras as li do ul*/
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    line-height: 2em;
+    margin-bottom: 0px;
+    padding: 20px;
+}
+
+/*listas da menu superior*/
+#menuSuperior ul li {
+    list-style: none;
+    /* retirando pontinhos das listas*/
+    padding-inline: 10px;
+}
+
+/*estilizar tag a do menu superior*/
+#menuSuperior ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Div para o banner */
+#bannerSuperior img {
+    width: 100%;
+    /*Estabelecer tamanho 100% do banner de largura na div #bannerSuperior */
+    height: 100%;
+    /*Estabelecer tamanho 100% do banner de altura na div #bannerSuperior */
+}
+
+/*Div para o menu inferior */
+#menuInferior {
+    background-color: black;
+    /*Estabelecer cor preta de fundo*/
+    color: white;
+    /*Estabelecer cores brancas*/
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Div para a organização das listas da div #menuInferior */
+#menuInferior ul {
+    display: inline-flex;
+    /*Espaçamento entra as li do ul */
+    padding: 20px;
+    /*espaçamento interno da  ul */
+}
+
+/*estilizar listas do menu inferior*/
+#menuInferior ul li {
+    margin-inline: 20px;
+    list-style: none;
+    /*Retirar os pontinhos das listas*/
+}
+
+/*estlizar tag a do menu inferior*/
+#menuInferior ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+#menuSuperior ul li:hover,
+#menuInferior ul li:hover {
+    font-weight: bold;
+}
+
+/*Div para o banner */
+#bannerSuperior img {
+    width: 100%;
+    /*Estabelecer tamanho 100% do banner de largura na div #bannerSuperior */
+    height: 100%;
+    /*Estabelecer tamanho 100% do banner de altura na div #bannerSuperior */
+}
+
+/*Modificações feito por Vitor Pessoa Silva*/
+/*Divs para responsividade*/
+#cabecalhomobile {
+    display: none;
+}
+
+#cabecalhomobilesearch {
+    display: none;
+}
+
+#menuSuperiormobile {
+    display: none;
+}
+
+/*Div para o menu inferior */
+#menuInferior {
+    background-color: black;
+    /*Estabelecer cor preta de fundo*/
+    color: white;
+    /*Estabelecer cores brancas*/
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Div para a organização das listas da div #menuInferior */
+#menuInferior ul {
+    display: inline-flex;
+    /*Espaçamento entra as li do ul */
+    padding: 20px;
+    /*espaçamento interno da  ul */
+    margin-bottom: 0;
+}
+
+/*estilizar listas do menu inferior*/
+#menuInferior ul li {
+    margin-inline: 20px;
+    list-style: none;
+    /*Retirar os pontinhos das listas*/
+    margin-bottom: 0;
+}
+
+/*estlizar tag a do menu inferior*/
+#menuInferior ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#menuSuperior ul li:hover,
+#menuInferior ul li:hover {
+    font-weight: bold;
+}
+
+@media(max-width: 1024px) {
+    /* body {
+        background-color: #501983;
+    } */
+
+    #cabecalho {
+        display: none;
+    }
+
+    #cabecalhomobile {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 10px;
+    }
+
+    #cabecalhomobile img {
+        width: 40px;
+
+    }
+
+    #cabecalhomobile #cabecalhoButtons {
+        width: 50%;
+        text-align: right;
+        width: 50%;
+    }
+
+    #cabecalhomobile #titulocabecalho {
+        width: 50%;
+        text-align: left;
+    }
+
+    #cabecalhomobile #titulocabecalho h1 {
+
+        font-family: 'Blank River', sans-serif;
+        /*determinando a fonte: 'fonteDotitulo' para o título do cabeçalho*/
+        font-weight: 400;
+        font-size: 2.5em;
+    }
+
+    #cabecalhomobilesearch {
+        display: flex;
+        width: 80%;
+        margin-left: 60px;
+    }
+
+    #cabecalhomobilesearch #searchBar {
+        width: 100%;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        margin-left: 50px;
+
+    }
+
+    #cabecalhomobilesearch #searchBar input[type='search'] {
+        position: relative;
+        /*posição absoluta em relação a div searchBar*/
+        height: 100%;
+        /*Altura de 100%*/
+        width: 85%;
+        /*Largura de 100%*/
+        border: none;
+        /*sem borda no input*/
+        font-size: 10px;
+        /*Tamanho da letra*/
+        padding-left: 10px;
+        /*Espaçãmento em relação à esquerda*/
+        border-radius: 10px;
+        /*arredeondamento do input*/
+        padding: 15px;
+
+    }
+
+    #cabecalhomobilesearch #searchBar i {
+        position: absolute;
+        right: 5px;
+        font-size: 10px;
+        color: gray;
+        cursor: pointer;
+        margin-right: 70px;
+    }
+}
+
+/*Responsividade para celulares. max 450 px*/
+@media (max-width: 750px) {
+    #header {
+        background-color: blueviolet;
+    }
+
+    #menuSuperior {
+        display: none;
+    }
+
+    #menuInferior {
+        display: none;
+    }
+
+    #bannerSuperior {
+        display: none;
+    }
+
+    #cabecalho {
+        display: none;
+    }
+
+    #cabecalhomobile {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(137, 43, 226, 0.582);
+    }
+
+    #cabecalhomobile img {
+        width: 40px;
+    }
+
+    #cabecalhomobile #cabecalhoButtons {
+        width: 50%;
+        text-align: right;
+    }
+
+    #cabecalhomobile #titulocabecalho {
+        width: 50%;
+        text-align: left;
+    }
+
+    #cabecalhomobile #titulocabecalho h1 {
+        font-family: 'Blank River', sans-serif;
+        font-size: 20px;
+
+    }
+
+    #cabecalhomobilesearch {
+        display: flex;
+        width: 80%;
+        margin-left: 35px;
+        background-color: blueviolet;
+
+    }
+
+    #cabecalhomobilesearch #searchBar {
+        width: 100%;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        padding: 10px;
+
+    }
+
+    #cabecalhomobilesearch #searchBar input[type='search'] {
+        position: relative;
+        /*posição absoluta em relação a div searchBar*/
+        height: 100%;
+        /*Altura de 100%*/
+        width: 100%;
+        /*Largura de 100%*/
+        border: none;
+        /*sem borda no input*/
+        font-size: 10px;
+        /*Tamanho da letra*/
+        padding-left: 10px;
+        /*Espaçãmento em relação à esquerda*/
+        border-radius: 10px;
+        /*arredeondamento do input*/
+        padding: 15px;
+    }
+
+    #cabecalhomobilesearch #searchBar i {
+        position: absolute;
+        right: 5px;
+        font-size: 10px;
+        color: gray;
+        cursor: pointer;
+        margin-right: 14px;
+    }
+
+    #menuSuperiormobile {
+        display: flex;
+        margin-top: 10px;
+        border-top: 2px dashed;
+        padding: 10px;
+        background-color: blueviolet;
+
+    }
+
+    #menuSuperiormobile ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 95%;
+        gap: 20px;
+
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    #menuSuperiormobile ul li {
+        list-style: none;
+        flex-grow: 1;
+        flex-basis: 200;
+    }
+
+    #menuSuperiormobile img {
+        width: 85px;
+        border-radius: 500px;
+    }
+}

@@ -1,0 +1,1255 @@
+@font-face {
+    font-family: 'Blank River';
+    src: url('./fonts/Blank\ River.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+#header {
+    background-color: black;
+    /* determinar cor de fundo preta*/
+    color: white;
+    /* determinar cor branca nas letras*/
+    text-align: center;
+    /* alinha título do cabeçalho*/
+    font-family: "Poppins", sans-serif;
+}
+
+#titulocabecalho a,
+#titulocabecalho a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+/* div do cabeçalho*/
+#cabecalho {
+    display: flex;
+    /* determinar flexiblidade para os blocos internos da div cabeçalho*/
+    flex-direction: row;
+    /* Alinhar em linhas oa divs internas*/
+    justify-content: right;
+    align-items: center;
+    /* colocar as divs internas na direita*/
+    padding: 30px;
+    /* estabelecer margem interna das div cabeçalho*/
+    gap: 200px;
+    width: 100%;
+}
+
+/* título do cabeçalho*/
+#cabecalho #titulocabecalho h1 {
+    font-family: 'Blank River', sans-serif;
+    /*determinando a fonte: 'fonteDotitulo' para o título do cabeçalho*/
+}
+
+/*input do tipo search da div searchBar interna da div cabeçalho*/
+#cabecalho #searchBar {
+    width: 300px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Input search*/
+#cabecalho #searchBar input[type='search'] {
+    position: absolute;
+    /*posição absoluta em relação a div searchBar*/
+    height: 100%;
+    /*Altura de 100%*/
+    width: 100%;
+    /*Largura de 100%*/
+    border: none;
+    /*sem borda no input*/
+    font-size: 10px;
+    /*Tamanho da letra*/
+    padding-left: 10px;
+    /*Espaçãmento em relação à esquerda*/
+    border-radius: 10px;
+    /*arredeondamento do input*/
+    padding: 15px;
+}
+
+/*Estlizando a lupa dentro do input*/
+#cabecalho #searchBar i {
+    position: absolute;
+    right: 5px;
+    font-size: 10px;
+    color: gray;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+/*ícones do cabeçalho*/
+#cabecalhoButtons img {
+    padding: 10px;
+    /*estabelecer tamanho das imagens*/
+    width: 50px;
+}
+
+/*Div da menu superior de header*/
+#menuSuperior {
+    color: rgb(238, 234, 234);
+    /*estabelecer cores brancas para as letras*/
+    padding: 20px;
+    /*estabelecer espaçamento interno da div #menuSuperio*/
+    border-top: 2px dashed;
+    /*estabelecer linha pontilhada para separar o menu do cabeçalho*/
+    white-space: nowrap;
+}
+
+/*Div para a organização das listas da div #menuSuperior */
+#menuSuperior ul {
+    display: flex;
+    /* estabelecer alinhamento flexível paras as li do ul*/
+    justify-content: space-around;
+    margin-bottom: 0px;
+}
+
+/*listas da menu superior*/
+#menuSuperior ul li {
+    list-style: none;
+    /* retirando pontinhos das listas*/
+    padding-inline: 10px;
+}
+
+/*estilizar tag a do menu superior*/
+#menuSuperior ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Div para o banner */
+#bannerSuperior img {
+    width: 100%;
+    /*Estabelecer tamanho 100% do banner de largura na div #bannerSuperior */
+    height: 100%;
+    /*Estabelecer tamanho 100% do banner de altura na div #bannerSuperior */
+}
+
+/*Div para o menu inferior */
+#menuInferior {
+    background-color: black;
+    /*Estabelecer cor preta de fundo*/
+    color: white;
+    /*Estabelecer cores brancas*/
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Div para a organização das listas da div #menuInferior */
+#menuInferior ul {
+    display: inline-flex;
+    /*Espaçamento entra as li do ul */
+    padding: 20px;
+    /*espaçamento interno da  ul */
+}
+
+/*estilizar listas do menu inferior*/
+#menuInferior ul li {
+    margin-inline: 20px;
+    list-style: none;
+    /*Retirar os pontinhos das listas*/
+}
+
+/*estlizar tag a do menu inferior*/
+#menuInferior ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+#menuSuperior ul li:hover,
+#menuInferior ul li:hover {
+    font-weight: bold;
+}
+
+/*Div para o banner */
+#bannerSuperior img {
+    width: 100%;
+    /*Estabelecer tamanho 100% do banner de largura na div #bannerSuperior */
+    height: 100%;
+    /*Estabelecer tamanho 100% do banner de altura na div #bannerSuperior */
+}
+
+/*Modificações feito por Vitor Pessoa Silva*/
+/*Divs para responsividade*/
+#cabecalhomobile {
+    display: none;
+}
+
+#cabecalhomobilesearch {
+    display: none;
+}
+
+#menuSuperiormobile {
+    display: none;
+}
+
+/*Div para o menu inferior */
+#menuInferior {
+    background-color: black;
+    /*Estabelecer cor preta de fundo*/
+    color: white;
+    /*Estabelecer cores brancas*/
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Div para a organização das listas da div #menuInferior */
+#menuInferior ul {
+    display: inline-flex;
+    /*Espaçamento entra as li do ul */
+    padding: 20px;
+    /*espaçamento interno da  ul */
+    margin-bottom: 0;
+}
+
+/*estilizar listas do menu inferior*/
+#menuInferior ul li {
+    margin-inline: 20px;
+    list-style: none;
+    /*Retirar os pontinhos das listas*/
+    margin-bottom: 0;
+}
+
+/*estlizar tag a do menu inferior*/
+#menuInferior ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#menuSuperior ul li:hover,
+#menuInferior ul li:hover {
+    font-weight: bold;
+}
+
+@media(max-width: 1024px) {
+    /* body {
+        background-color: #501983;
+    } */
+
+    #cabecalho {
+        display: none;
+    }
+
+    #cabecalhomobile {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 10px;
+    }
+
+    #cabecalhomobile img {
+        width: 40px;
+    }
+
+    #cabecalhomobile #cabecalhoButtons {
+        width: 50%;
+        text-align: right;
+        width: 50%;
+    }
+
+    #cabecalhomobile #titulocabecalho {
+        width: 50%;
+        text-align: left;
+    }
+
+    #cabecalhomobile #titulocabecalho h1 {
+        font-family: 'Blank River', sans-serif;
+        /*determinando a fonte: 'fonteDotitulo' para o título do cabeçalho*/
+        font-weight: 400;
+        font-size: 2.5em;
+    }
+
+    #cabecalhomobilesearch {
+        display: flex;
+        width: 80%;
+        margin-left: 60px;
+    }
+
+    #cabecalhomobilesearch #searchBar {
+        width: 100%;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        margin-left: 50px;
+    }
+
+    #cabecalhomobilesearch #searchBar input[type='search'] {
+        position: relative;
+        /*posição absoluta em relação a div searchBar*/
+        height: 100%;
+        /*Altura de 100%*/
+        width: 85%;
+        /*Largura de 100%*/
+        border: none;
+        /*sem borda no input*/
+        font-size: 10px;
+        /*Tamanho da letra*/
+        padding-left: 10px;
+        /*Espaçãmento em relação à esquerda*/
+        border-radius: 10px;
+        /*arredeondamento do input*/
+        padding: 15px;
+    }
+
+    #cabecalhomobilesearch #searchBar i {
+        position: absolute;
+        right: 5px;
+        font-size: 10px;
+        color: gray;
+        cursor: pointer;
+        margin-right: 70px;
+    }
+}
+
+@media (max-width: 750px) {
+    #header {
+        background-color: blueviolet;
+    }
+
+    #menuSuperior {
+        display: none;
+    }
+
+    #menuInferior {
+        display: none;
+    }
+
+    #bannerSuperior {
+        display: none;
+    }
+
+    #cabecalho {
+        display: none;
+    }
+
+    #cabecalhomobile {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(137, 43, 226, 0.582);
+    }
+
+    #cabecalhomobile img {
+        width: 40px;
+    }
+
+    #cabecalhomobile #cabecalhoButtons {
+        width: 50%;
+        text-align: right;
+    }
+
+    #cabecalhomobile #titulocabecalho {
+        width: 50%;
+        text-align: left;
+    }
+
+    #cabecalhomobile #titulocabecalho h1 {
+        font-family: 'Blank River', sans-serif;
+        font-size: 20px;
+    }
+
+    #cabecalhomobilesearch {
+        display: flex;
+        width: 80%;
+        margin-left: 35px;
+        background-color: blueviolet;
+    }
+
+    #cabecalhomobilesearch #searchBar {
+        width: 100%;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    #cabecalhomobilesearch #searchBar input[type='search'] {
+        position: relative;
+        /*posição absoluta em relação a div searchBar*/
+        height: 100%;
+        /*Altura de 100%*/
+        width: 100%;
+        /*Largura de 100%*/
+        border: none;
+        /*sem borda no input*/
+        font-size: 10px;
+        /*Tamanho da letra*/
+        padding-left: 10px;
+        /*Espaçãmento em relação à esquerda*/
+        border-radius: 10px;
+        /*arredeondamento do input*/
+        padding: 15px;
+    }
+
+    #cabecalhomobilesearch #searchBar i {
+        position: absolute;
+        right: 5px;
+        font-size: 10px;
+        color: gray;
+        cursor: pointer;
+        margin-right: 14px;
+    }
+
+    #menuSuperiormobile {
+        display: flex;
+        margin-top: 10px;
+        border-top: 2px dashed;
+        padding: 10px;
+        background-color: blueviolet;
+
+    }
+
+    #menuSuperiormobile ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 95%;
+        gap: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    #menuSuperiormobile ul li {
+        list-style: none;
+        flex-grow: 1;
+        flex-basis: 200;
+    }
+
+    #menuSuperiormobile img {
+        width: 85px;
+        border-radius: 500px;
+    }
+}
+
+/* Ir para o topo */
+#irParaTop {
+    background-color: #7F7F7F;
+    width: 46px;
+    height: 46px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 40%;
+    z-index: 99;
+}
+
+#irParaTop:hover {
+    opacity: 80%;
+}
+
+#irParaTop img {
+    width: 46px;
+}
+
+
+/* Titulo */
+
+.titulo {
+    width: calc(100% - 5px);
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 20px;
+}
+
+.tituloTexto {
+    height: 290px;
+    width: 600px;
+    background-image: url('../img/lançamentos-titulo.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    font-family: 'Blank River', sans-serif;
+    font-size: 86pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo hr {
+    width: 100%;
+    border: dashed 2px;
+    position: relative;
+    bottom: 80px;
+}
+
+/* carrosel */
+
+#carousel {
+    max-width: 1300px;
+    width: 90%;
+    /* height: 500px; */
+    margin: auto;
+    margin-block: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    position: relative;
+    bottom: 50px;
+}
+
+#carouselExampleIndicators {
+    max-width: 1300px;
+    width: 90%;
+}
+
+.carousel-inner {
+    max-width: 1300px;
+    width: 100%;
+}
+
+.carousel-item {
+    max-width: 1300px;
+    width: 100%;
+}
+
+.carousel-item img {
+    max-width: 1300px;
+    width: 90%;
+}
+
+
+/* BANNER INFERIOR */
+
+#bannerInferior {
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    bottom: 50px;
+}
+
+#bannerInferior img {
+    width: 100%;
+}
+
+/* BUttons Banner */
+
+#bannerCarta {
+    max-width: 1300px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    position: relative;
+    bottom: 50px;
+    gap: 10px;
+}
+
+.cartaBannerInferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1B0935;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Blank RIver', sans-serif;
+    font-size: larger;
+    max-width: 300px;
+    width: 100%;
+    height: 100px;
+}
+
+.cartaBannerInferior p {
+    margin-bottom: 0px;
+}
+
+.cartaBannerInferior img {
+    width: 80px;
+}
+
+#spanCardBanner {
+    text-decoration: underline 2px;
+}
+
+/* MAIN */
+
+#main {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    bottom: 50px;
+}
+
+/* card */
+
+.mainCard {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    margin: auto;
+}
+
+.mainCardIMG {
+    width: 100%;
+    /* height: 100%; */
+    background-color: #A5A5A5;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+}
+
+.mainCard .imgPoster {
+    width: 100%;
+    /* height: 400px; */
+    border-radius: 20px;
+}
+
+.mainCardContent {
+    max-width: 330px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+.mainCardColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.mainCardColumn p {
+    margin-bottom: 0px;
+}
+
+.mainCardSubtitulo {
+    color: #7F7F7F;
+}
+
+/* linha pontilhada */
+
+#linhaPontilhada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-block: 20px;
+}
+
+#linhaPontilhada hr {
+    width: 100%;
+    border: dashed 2px;
+}
+
+/* Aside */
+
+#aside {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+}
+
+#asideLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 500px;
+    padding: 10px;
+    font-size: larger;
+    border-right: dashed 2px;
+}
+
+#asideLeftContent {
+    width: 80%;
+}
+
+#asideLeft h2 {
+    font-size: 32pt;
+    margin-bottom: 10px;
+}
+
+#cardStores {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#linha-pontilhada-vertical {
+    max-height: 600px;
+    height: 100%;
+}
+
+#cardStores img {
+    max-width: 200px;
+    width: 100%;
+}
+
+#asideRigth {
+    max-width: 500px;
+    width: 50%;
+}
+
+#asideRigth #asideRigthImg {
+    max-width: 500px;
+    width: 100%;
+}
+
+/* MODAL */
+
+#fundoModal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+#modal {
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    min-width: 250px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    top: -55px;
+}
+
+#modalHeader {
+    min-height: 40px;
+    color: white;
+    background-color: #1b0935;
+    width: calc(100% + 20px);
+    position: relative;
+    top: -10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+}
+
+#modalHeader h1 {
+    color: white;
+    font-size: 1.5em;
+    margin-block: 0;
+}
+
+#modal p {
+    margin-bottom: 0;
+    margin: 10px 0;
+}
+
+#botaoModal {
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #1b0935;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#botaoModal:hover {
+    opacity: 80%;
+    display: flex;
+}
+
+/* FOOTER */
+
+#footer {
+    width: 100%;
+    /*Rodapé ocupando 100% de largura da página*/
+    display: flex;
+    /*Flexiblizando o conteúdo interno do footer*/
+    flex-direction: row;
+    /*Estabelecendo um direção alinhada dos blocos internos do footer */
+    font-family: "Poppins", sans-serif;
+}
+
+/*Título do tipo h1 do footer lado esquerdo*/
+#footer h1 {
+    text-align: center;
+    /*Centralizando o título*/
+    font-family: 'Blank River', sans-serif;
+    /*estabelenco fonte: 'fonteDotitulo' para o título*/
+    margin-top: 20px;
+}
+
+/*Div esquerda do footer*/
+#footerLeft {
+    background-color: black;
+    /*estabelencedo cor de fundo preta para o footer esquerdo*/
+    color: white;
+    /*estabelecendo cores de letras brancas para o footer esquerdo*/
+    width: 60%;
+    /*estabelenco largura de 95% da página para o footer esquerdo*/
+    margin: auto;
+}
+
+/*Conteúdo do footer*/
+#footerLeftColumns {
+    display: flex;
+    /*Flexiblizando as 4 colunas*/
+    flex-direction: row;
+    /*Alinhando as quatro colunas*/
+    margin: auto;
+    /*Estabelecendo 10% de distanciamento do lado esquerdo*/
+    align-items: start;
+    justify-content: space-around;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/*Conteúdo das linhas das colunas*/
+.columFooter ul li {
+    list-style: none;
+    /*Retirando os pontinhos das listas*/
+    line-height: 2em;
+}
+
+.columFooter ul li a,
+.columFooter ul li a:visited {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*Div para a estilização dos ícones*/
+#footerLeftButtons img {
+    width: 50px;
+}
+
+#footerLeftButtons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+#footerLeftButtons li {
+    list-style: none;
+    cursor: pointer;
+}
+
+
+/*Div direita do footer*/
+#footerRigth {
+    background-color: rgb(63, 4, 63);
+    /*Cor de fundo da div direita do footer*/
+    width: 40%;
+    /*largura do footer da direita*/
+    padding: 20px;
+}
+
+/*Título do tipo h3 do footer direito*/
+#tituloRodepeRight {
+    margin-top: 25px;
+    /*distanciamento em relação ao topo do título*/
+
+    /*distancimento em relação a margem esquerda do título*/
+    font-size: 20px;
+    /*fonte da letra do título*/
+    text-align: justify;
+    /*título justificado*/
+    color: white;
+    /*cor da letra do título*/
+}
+
+/*paragrafo do tipo h3 do footer direito*/
+#paragrafoRodapeRight {
+    margin-top: 50px;
+    /*Distanciamento em relação ao topo do paragrafo*/
+    font-size: 20px;
+    /*fonte da letra do paragrafo*/
+    text-align: justify;
+    /*paragrafo justificado*/
+    color: white;
+    /*cor da letra do paragrafo*/
+}
+
+#inputFooterDireito {
+    width: 80%;
+    height: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/*Input do tipo text do footer direito*/
+#footerRigth #inputFooterDireito input[type='email'] {
+    position: absolute;
+    /*posição absoluta em relação a div searchBar*/
+    height: 100%;
+    /*Altura de 100%*/
+    width: 100%;
+    /*Largura de 100%*/
+    border: none;
+    /*sem borda no input*/
+    font-size: 10px;
+    /*Tamanho da letra*/
+    padding-left: 10px;
+    /*Espaçãmento em relação à esquerda*/
+    border-radius: 10px;
+    /*arredeondamento do input*/
+    padding: 20px;
+}
+
+/*Estilizar o icone de email dentro do input*/
+#footerRigth #inputFooterDireito i {
+    position: absolute;
+    right: 5px;
+    font-size: 15px;
+    color: rgb(7, 7, 7);
+    cursor: pointer;
+    margin-right: 5px;
+    height: 10px;
+}
+
+/*Modificações feito por Vitor Pessoa Silva*/
+/*Divs para responsividade*/
+@media screen and (max-width: 1024px) and (min-width: 451px) {
+    #footer {
+        display: flex;
+        flex-direction: column-reverse;
+        font-family: "Poppins", sans-serif;
+    }
+
+    #footerRigth {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #footerRigth p {
+        font-size: 15px;
+    }
+
+    #footerRigth h3 {
+        font-size: 20px;
+    }
+
+    #inputFooterDireito {
+        margin-bottom: 20px;
+    }
+
+
+    #footerLeftButtons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #footerLeftButtons li {
+        flex-grow: 1;
+        flex-basis: 200;
+    }
+
+    #footerLeft {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    #footerLeftColumns {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #footerLeftColumns ul {
+        text-align: center;
+    }
+
+    #footerLeftButtons img {
+        width: 30px;
+        margin-left: 25px;
+        gap: 10px;
+    }
+
+    #footerLeftButtons {
+        padding: 10px;
+    }
+
+    #inputFooterDireito {
+        width: 50%;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    #footerRigth #inputFooterDireito input[type='email'] {
+        position: absolute;
+        /*posição absoluta em relação a div searchBar*/
+        height: 100%;
+        /*Altura de 100%*/
+        width: 100%;
+        /*Largura de 100%*/
+        border: none;
+        /*sem borda no input*/
+        font-size: 10px;
+        /*Tamanho da letra*/
+        padding-left: 10px;
+        /*Espaçãmento em relação à esquerda*/
+        border-radius: 10px;
+        /*arredeondamento do input*/
+        padding: 20px;
+    }
+
+    #footerRigth #inputFooterDireito i {
+        position: absolute;
+        right: 5px;
+        font-size: 15px;
+        color: rgb(7, 7, 7);
+        cursor: pointer;
+        margin-right: 5px;
+        height: 10px;
+    }
+}
+
+/*Rodapé responsivo max 726px*/
+@media (max-width: 500px) {
+    #footer {
+        display: flex;
+        flex-direction: column-reverse;
+        font-family: "Poppins", sans-serif;
+    }
+
+    #footerRigth {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #footerRigth p {
+        font-size: 15px;
+    }
+
+    #footerRigth h3 {
+        font-size: 20px;
+    }
+
+    #inputFooterDireito {
+        margin-bottom: 20px;
+    }
+
+
+    #footerLeftButtons {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        gap: 0;
+        padding: 0;
+        margin-left: 0;
+    }
+
+    #footerLeftButtons img {
+        margin-left: 0;
+    }
+
+    #footerLeft {
+        width: 100%;
+    }
+
+    #footerLeftColumns {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    #footerLeftColumns ul {
+        text-align: center;
+    }
+
+    #footerLeftButtons img {
+        width: 25px;
+    }
+
+    #footerLeftButtons {
+        padding: 5px;
+    }
+}
+
+/*Rodapé responsivo max 1130px*/
+
+/* RESPOSINVIDADE */
+
+@media(max-width:960px) {
+    #main {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+    }
+
+    #cardStores {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media(max-width:800px) {
+    #aside {
+        flex-direction: column;
+    }
+
+    #asideLeft {
+        border-right: none;
+        width: 100%;
+        border-bottom: dashed 2px;
+    }
+
+    #cardStores {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media(max-width: 750px) {
+    #bannerCarta {
+        width: 95%;
+        height: fit-content;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:690px) {
+    .mainCardColumn {
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:630px) {
+    #main {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+    }
+}
+
+@media(max-width:600px) {
+    .tituloTexto {
+        max-width: 300px;
+        background-image: url('../img/lançamentos-titulo-mobile.png');
+        background-position: 50% 50%;
+        background-size: contain;
+        font-size: 60pt;
+    }
+}
+
+@media(max-width:500px) {
+
+    #aside {
+        position: relative;
+        bottom: 320px;
+    }
+
+    #main,
+    #linhaPontilhada {
+        position: relative;
+        bottom: 280px;
+    }
+
+    #tituloDesconto {
+        bottom: 180px;
+    }
+
+    #carousel,
+    #bannerInferior {
+        bottom: 150px;
+    }
+
+    #bannerCarta {
+        margin-top: 0px;
+        bottom: 130px;
+    }
+
+    .titulo hr {
+        bottom: 100px;
+    }
+
+    .titulo {
+        position: relative;
+        bottom: 50px;
+    }
+}
+
+@media(max-width:460px) {
+    #cardStores {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mainCardContenColumnImg {
+        display: none;
+    }
+}
