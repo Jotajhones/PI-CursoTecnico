@@ -1,0 +1,171 @@
+/* formsProd */
+
+
+.forms {
+    padding-top: 20px;
+    min-height: calc(fit-content + 10px);
+    max-height: calc(100vh - 70px);
+    max-width: 450px;
+    width: 100%;
+}
+
+.formsProd,
+.formsUsers {
+    background-color: var(--fundo2);
+    display: flex;
+    flex-direction: column;
+    min-height: calc(fit-content + 10px);
+    max-height: calc(100vh - 70px);
+    padding-top: 20px;
+    padding-inline: 5px;
+    border-radius: 10px;
+    max-width: 450px;
+    width: 100%;
+    gap: 5px;
+    overflow: auto;
+}
+
+.formsProd div,
+.formsUsers div {
+    display: flex;
+    flex-direction: colum;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.formsProd div input,
+.formsUsers div input {
+    width: 100%;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--cor3);
+    background-color: var(--fundo);
+    text-indent: 5px;
+    border-radius: 2px 2px 0 0;
+}
+
+.buttons {
+    display: flex;
+    margin: 20px auto;
+    padding: auto;
+    justify-content: space-evenly;
+}
+
+.buttons button {
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--button);
+    border-radius: 25px;
+    color: var(--corFonte1);
+    font-weight: 700;
+    font-size: medium;
+}
+
+.buttons button:hover {
+    background-color: var(--buttonHover);
+    color: #cccccc;
+    cursor: pointer;
+}
+
+/* formularios DESCRICAO.html*/
+
+.containerTel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+    min-height: calc(50% - 60px);
+    scroll-behavior: smooth;
+    padding-block: 5px;
+}
+
+.tel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--cardDescricao);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px #4f2e0070;
+}
+
+.containerInputsTel {
+    display: flex;
+    gap: 50px;
+}
+
+.containerEndereco {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    min-height: calc(50% - 60px);
+    padding-block: 5px;
+}
+
+.endereco span {
+    display: flex;
+    flex-direction: column;
+}
+
+.endereco {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    background-color: var(--cardDescricao);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px #4f2e0070;
+}
+
+
+.tel input,
+.endereco input {
+    outline: none;
+    border: solid 1px var(--cor4);
+    padding: 2px;
+}
+
+.buttonsDesc {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 230px;
+}
+
+.buttonsDesc button {
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+    cursor: pointer;
+}
+
+.buttonsDesc button img {
+    width: 24px;
+}
+
+.btMais {
+    background-color: var(--button);
+
+}
+
+.btVerificar {
+    background-color: #2AD02A;
+}
+
+.btLixo {
+    background-color: #DD0612;
+}
+
+.buttonsDesc button:hover {
+    opacity: 70%;
+}
