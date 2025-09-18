@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imgs/icons/favicon.png" type="image/x-icon">
+    <title>PI - Produtos</title>
+
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme');
+            if (theme) {
+
+                document.documentElement.setAttribute('data-theme', JSON.parse(theme));
+            }
+        })();
+    </script>
+    
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/cardVendaCompleta.css">
+    <link rel="stylesheet" href="../styles/data.css">
+    <link rel="stylesheet" href="../styles/filtros.css">
+    <link rel="stylesheet" href="../styles/tabela.css">
+    <link rel="stylesheet" href="../styles/forms.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="stylesheet" href="../styles/error503.css">
+    <link rel="stylesheet" href="../styles/error204.css">
+    <link rel="stylesheet" href="../styles/error400.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="menu">
+            <ul>
+                <a href="../../index.html">
+                    <li>Home</li>
+                </a>
+                <a href="./produtos.html">
+                    <li>Produtos</li>
+                </a>
+                <a href="./usuarios.html">
+                    <li>Usuarios</li>
+                </a>
+                <a href="./vendas.html">
+                    <li>Vendas</li>
+                </a>
+            </ul>
+        </nav>
+
+        <button type="button" class="buttonTheme" data-theme="claro">
+            <img src="../imgs/icons/brightness.png" alt="icone-sol">
+        </button>
+    </header>
+
+    <main class="mainVendaCompleta">
+        <!-- Container Principal -->
+
+        <div class="cardVendaCompleta">
+            <!-- Cabecalho para receber dados do cliente -->
+
+            <div class="cardVendasHeader">
+                <span id="spanId"><strong>ID Venda:</strong> </span>
+                <span id="spanData"><strong>Data:</strong> </span>
+                <span id="spanTotal"><strong>Total: R$</strong> </span>
+                <span id="spanUsuario"><strong>Usuário:</strong> </span>
+
+                <span id="spanSituacao">
+                    <strong>Situação: </strong>
+
+                    <select name="situacaoVenda" id="situacaoVenda">
+                        <option value="" selected disabled>Selecione</option>
+                        <option value="andamento">Em andamento</option>
+                        <option value="confirmada">Confirmada</option>
+                        <option value="cancelada">Cancelada</option>
+                    </select>
+                </span>
+
+            </div>
+
+            <hr>
+
+            <div class="listaProdutos" id="listaProdutos">
+                <!-- Container para receber lista de compras cliente dinamicamente -->
+            </div>
+
+            <div class="produtoItem">
+                <div> <span class="total"><strong>TOTAL</strong></span>
+
+                </div>
+
+                <div class="produtoValores">
+                    <div class="VendaPrecoTotal" id="VendaPrecoTotal"><strong>R$</strong> </div>
+                </div>
+            </div>
+
+            <div class="buttonsVendas">
+                <button id="btnVoltar">Voltar</button>
+                <button id="btnAlterar">Alterar</button>
+            </div>
+
+    </main>
+
+    <script src="../scripts/common/theme.js"></script>
+    <script type="module" src="../scripts/vendasCompleta/index.js"></script>
+</body>
+
+</html>

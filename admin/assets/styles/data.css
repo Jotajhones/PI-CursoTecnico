@@ -1,0 +1,18 @@
+/* DATA Produtos*/
+
+.dataProd,
+.dataUsers {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-top: 10px;
+    gap: 10px;
+    transition: 1s;
+}
+
+/* CARD pagina DESCRICAO.html*/
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    transition: 1s;
+}
