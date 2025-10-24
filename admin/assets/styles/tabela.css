@@ -1,0 +1,113 @@
+/* TABELA PRODUTOS*/
+
+.tabelaProd,
+.tabelaUsers,
+.tabelaVendas {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    transition: 1s;
+}
+
+.cabecalhoProd,
+.cabecalhoUsers {
+    min-width: 515px;
+    width: 100%;
+    max-width: 715px;
+    height: 50px;
+    background-color: var(--cor3);
+    color: var(--corFonte2);
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+    border-radius: 10px 10px 0 0;
+    transition: 1s;
+    border-bottom: 1px solid var(--fundo);
+}
+
+.resultadoProd,
+.resultadoUsers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    overflow: auto;
+    min-height: 240px;
+    max-height: calc(100vh - 120px);
+    min-width: 515px;
+    max-width: 715px;
+    align-content: flex-start;
+    gap: 5px;
+    overflow: auto;
+    border: solid 1px var(--cor3);
+    padding: 5px;
+    transition: 1s;
+    border-top: 1px solid var(--fundo);
+}
+
+.resultadoCardProd,
+.resultadoCardUsers,
+.resultadoCardVendas {
+    background-color: var(--fundo2);
+    color: var(--corFonte);
+    min-width: 250px;
+    width: 100%;
+    max-width: 350px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    transition: 0.3s;
+}
+
+.resultadoCardProd span,
+.resultadoCardUsers span,
+.resultadoCardVendas span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-word;
+
+}
+
+.resultadoCardProd:hover,
+.resultadoCardUsers:hover,
+.resultadoCardVendas:hover {
+    background-color: #8CB4FF;
+    color: var(--corFonte1);
+    transition: 0.3s;
+}
+
+/* Vendas */
+
+.cabecalhoVendas {
+    min-width: 515px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--cor3);
+    color: var(--corFonte2);
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+    border-radius: 10px 10px 0 0;
+    transition: 1s;
+}
+
+.resultadoVendas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    overflow: auto;
+    min-height: 240px;
+    max-height: calc(100vh - 120px);
+    min-width: 515px;
+    align-content: flex-start;
+    gap: 5px;
+    overflow: auto;
+    border: solid 1px var(--cor3);
+    padding: 5px;
+    transition: 1s;
+}

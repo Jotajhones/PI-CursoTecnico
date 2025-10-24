@@ -1,0 +1,64 @@
+.cardVendaCompleta {
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--fundo2);
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+    color: var(--corFonte);
+        transition: 1s;
+}
+
+.cardVendasHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    word-wrap: nowrap;
+    margin:auto auto 20px auto;
+    width: 100%;
+}
+
+.cardVendasHeader span {
+    font-size: 14pt;
+    color: var(--corFonte);
+    width: 350px;
+}
+
+.listaProdutos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produtoItem {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: dashed 1px var(--corFonte);
+    padding: 5px 0px;
+}
+
+.produtoDescricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.selectSituacaoItemVenda {
+    width: 100px;
+}
+
+.produtoDescricao select {
+    outline: none;
+}
+
+.produtoValores {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px   ;
+}
+
+.inputQuantidadeVenda {
+    width: 35px;
+}
