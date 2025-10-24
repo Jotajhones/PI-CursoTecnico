@@ -1,0 +1,58 @@
+import atualizarDescricao from "../commons/atualizarDescricao.js";
+import logout from "../login/services/logout.js";
+import carrinhoDeCompras from "../commons/carrinhoDeCompras.js";
+import goToCart from "../commons/goToCart.js"
+import verificarLoginAtivo from "../login/services/verificarLoginAtivo.js";
+import atualizarComentario from "./services/atualizarComentario.js";
+import addComentario from "./services/addComentario.js";
+
+window.addEventListener('load', async () => {
+
+    atualizarDescricao();
+    verificarLoginAtivo();
+    atualizarComentario();
+
+    const id_venda = JSON.parse(window.localStorage.getItem('BlusasBlusasUser'));
+    carrinhoDeCompras(id_venda.ultima_venda);
+
+    const btnComentario = document.querySelector('#btnComentario');
+
+    btnComentario.addEventListener('click', async () => {
+        addComentario();
+    });
+
+});
+
+const logoutIMGButton = document.querySelectorAll('.logoutIMG');
+
+logoutIMGButton.forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        logout();
+        window.location.href = '../../index.html';
+    })
+});
+
+const carrinhos = document.querySelectorAll('.carrinhoDeCompraIcon');
+
+const user = JSON.parse(window.localStorage.getItem('BlusasBlusasUser'));
+
+
+if (user) {
+    carrinhos.forEach(item => {
+        item.addEventListener('click', () => {
+            goToCart(user.ultima_venda, user.id_usuario)
+        });
+    });
+
+    const userName = document.querySelectorAll('.cabecalhoLoginNome');
+
+    userName.forEach(item => {
+        item.addEventListener('click', () => {
+            window.location.href = `./perfil.html?id_usuario=${user.id_usuario}`;
+        });
+    });
+
+}
+
+
