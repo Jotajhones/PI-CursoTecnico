@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blusas/Blusas</title>
+
+    <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/topo.css">
+    <link rel="stylesheet" href="../style/cartPage.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/modal.css">
+    <link rel="stylesheet" href="../style/modalAlt.css">
+    <link rel="stylesheet" href="../style/caixaDialogo.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="../icons/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header id="header">
+        <div id="cabecalho">
+            <div id="titulocabecalho">
+                <a href="../../index.html">
+                    <h1>Blusas/blusas</h1>
+                </a>
+            </div>
+
+            <div class="cabecalhoButtons">
+                <span class="cabecalhoLoginNome"></span>
+
+                <a href="#" class="carrinhoDeCompraIcon iconHide">
+                    <span class="carrinhoIndice"></span>
+                    <img src="../icons/IconeCarrinho.png" alt="carrinho de compra">
+                </a>
+
+                <a href="./login.html" class="loginIMG iconShow">
+                    <img src="../icons/IconePerfil.png" alt="perfi do usuario">
+                </a>
+
+                <a href="#" class="logoutIMG iconHide">
+                    <img src="../icons/sair-do-usuario.png" alt="Icone de interface Log Out">
+                </a>
+            </div>
+        </div>
+
+        <div id="cabecalhomobile">
+            <div id="titulocabecalho">
+                <a href="../../index.html">
+                    <h1>Blusas/blusas</h1>
+                </a>
+            </div>
+
+            <div class="cabecalhoButtons">
+                <a href="">
+                    <span class="cabecalhoLoginNome"></span>
+                </a>
+
+                <a href="#" class="carrinhoDeCompraIcon iconHide">
+                    <span class="carrinhoIndice"></span>
+                    <img src="../icons/IconeCarrinho.png" alt="carrinho de compra">
+                </a>
+
+                <a href="./login.html" class="loginIMG iconShow">
+                    <img src="../icons/IconePerfil.png" alt="carrinhoDecompra">
+                </a>
+
+                <a href=#" class="logoutIMG iconHide">
+                    <img src="../icons/sair-do-usuario.png" alt="perfilDousuario">
+                </a>
+            </div>
+        </div>
+
+        <nav id="menuSuperiormobile">
+            <ul>
+                <li><a href="./nerd.html"><img src="../icons/nerd.png" alt="icone de interface nerd"></a>
+                    <p>Nerd</p>
+                </li>
+                <li><a href="./anime.html"><img src="../icons/ninja.png" alt="icone de interface anime"></a>
+                    <p>Anime</p>
+                </li>
+                <li><a href="./artistas.html"><img src="../icons/revista.png" alt="icone de interface artistas"></a>
+                    <p>Artistas</p>
+                </li>
+                <li><a href="./populares.html"><img src="../icons/camisa-polo.png"
+                            alt="icone de interface populares"></a>
+                    <p>Populares</p>
+                </li>
+                <li><a href="./series.html"><img src="../icons/assistindo-um-filme.png"
+                            alt="icone de interface series"></a>
+                    <p>Séries</p>
+                </li>
+                <li><a href="./cartoons.html"><img src="../icons/donatello.png" alt="icone de cartoons"></a>
+                    <p>Cartooons</p>
+                </li>
+                <li><a href="./moletons.html"><img src="../icons/moletom-com-capuz.png"
+                            alt="icone de interface moletons"></a>
+                    <p>Moletons</p>
+                </li>
+            </ul>
+        </nav>
+
+        <hr id="hrDescktop">
+
+        <nav id="menuSuperior">
+            <ul>
+                <li><a href="./nerd.html">Nerd</a></li>
+                <li><a href="./anime.html">Anime</a></li>
+                <li><a href="./artistas.html">Artistas</a></li>
+                <li><a href="./populares.html">Populares</a></li>
+                <li><a href="./series.html">Séries</a></li>
+                <li><a href="./cartoons.html">Cartoons</a></li>
+                <li><a href="./moletons.html">Moletons</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <abbr title="Ir para o topo">
+        <a href="#header">
+            <div id="irParaTop">
+                <img src="../icons/ir-para-o-topo.png" alt="Ir para o topo">
+            </div>
+        </a>
+    </abbr>
+
+    <main class="mainVendaCompleta">
+        <div class="cardVendaCompleta">
+            <div class="cardVendasHeader">
+                <span id="spanId"><strong>ID Venda:</strong> </span>
+                <span id="spanData"><strong>Data:</strong> </span>
+                <span id="spanTotal"><strong>Total: R$</strong> </span>
+                <span id="spanUsuario"><strong>Usuário:</strong> </span>
+                <span id="spanSituacao"><strong>Situação: </strong> </span>
+            </div>
+
+            <hr>
+
+            <div class="listaProdutos" id="listaProdutos"> 
+            </div>
+
+            <div class="produtoItem">
+                <div> <span class="total"><strong>TOTAL</strong></span>
+                </div>
+
+                <div class="produtoValores">
+                    <div class="VendaPrecoTotal" id="VendaPrecoTotal"><strong>R$ </strong> </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="button" id="btnHistorico">
+                    <abbr title="Historico de compras">HISTORICO</abbr>
+                </button>
+                <button type="button" id="btnAlterar">ALTERAR</button>
+                <button type="button" id="btnCancelar" class="cancelar">CANCELAR COMPRA</button>
+                <button type="button" id="btnComprar" class="comprar">COMPRAR $</button>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div id="footerLeft">
+            <h1>Blusas/blusas</h1>
+            <div id="footerLeftColumns">
+                <div class="columFooter">
+                    <ul>
+                        <li>
+                            <h2>Contatos</h2>
+                        </li>
+                        <li><a href="https://github.com/Eshley-NaLiMa" target="_blank">Eshley Martins</a></li>
+                        <li><a href="https://github.com/jotajhones" target="_blank">Joao Pedro de Lima</a></li>
+                        <li><a href="https://github.com/DevRafaelLucas" target="_blank">Rafael Lucas Souza</a></li>
+                        <li><a href="https://github.com/Vit-Pe0208" target="_blank">Vitor Pessoa</a></li>
+                    </ul>
+                </div>
+                <div class="columFooter">
+                    <ul>
+                        <li>
+                            <h2>Informação</h2>
+                        </li>
+                        <li>SENAC TAGUATINGA</li>
+                        <li>Centro de Educação Profissional</li>
+                        <li>Jó Rufino e Carlos Aguiar</li>
+                        <li>SETOR G NORTE – QNG S/N ÁREA ESPECIAL</li>
+                        <li>Taguatinga | DF</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="footerLeftButtons">
+                <img src="../icons/american-expressIcon.png" alt="Icone cartão/pagamento">
+                <img src="../icons/credit-cardIcon.png" alt="Icone cartão/pagamento">
+                <img src="../icons/iconecardIcon.png" alt="Icone cartão/pagamento">
+                <img src="../icons/maestroIcon.png" alt="Icone cartão/pagamento">
+                <img src="../icons/mastercardicon.png" alt="Icone cartão/pagamento">
+                <img src="../icons/visaicon.png" alt="Icone cartão/pagamento">
+                <img src="../icons/worldwideIcon.png" alt="Icone cartão/pagamento">
+            </div>
+        </div>
+
+        <div id="footerRigth">
+            <div id="tituloRodepeRight">
+                <h3>Faça parte da comunidade </h3>
+                <h3>e receba todas as novidades!!!</h3>
+            </div>
+            <div id="paragrafoRodapeRight">
+                <p>Insira seu e-mail </p>
+                <p> abaixo e aproveite nossas promoções</p>
+            </div>
+            <div id="inputFooterDireito">
+                <input type="email" id="inputFooter" placeholder="Insira seu email">
+                <i class="fa-solid fa-envelope" id="buttonInputFooter"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../script/carrinho/index.js"></script>
+</body>
+
+</html>

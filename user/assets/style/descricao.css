@@ -1,0 +1,258 @@
+main {
+    max-width: 1300px;
+    width: 100%;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.cardSection {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.produto {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0px 0px 3px 3px #33333346;
+    padding: 5px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.interface {
+    max-width: 450px;
+    width: 100%;
+}
+
+.capa,
+.capa img {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    row-gap: 20px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
+
+.content h1 {
+    color: #383838;
+    margin-bottom: 15px;
+}
+
+.content h2 {
+    color: var(--cardTitulo);
+    margin-bottom: 15px;
+}
+
+.content p {
+    margin-bottom: 15px;
+}
+
+.tamanho {
+    font-weight: bold;
+}
+
+.interaction-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+}
+
+.buttons .comprar {
+    border: none;
+    outline: none;
+    background-color: var(--filtroBotao);
+    color: var(--filtroBotaoColor);
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    border-radius: 3px;
+}
+
+.buttons .carrinho {
+    border: none;
+    outline: none;
+    background-color: var(--filtroBotao);
+    color: var(--filtroBotaoColor);
+    width: 60px;
+    height: 50px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons .carrinho img {
+    width: 32px;
+}
+
+.buttons button:hover {
+    background-color: #333;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.comentario-section {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comentario-section label {
+    font-weight: bold;
+    color: #383838;
+}
+
+.comentario-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.comentario-input:focus {
+    border-color: var(--filtroBotao);
+    box-shadow: 0 0 5px rgba(var(--filtroBotao), 0.5);
+    outline: none;
+}
+
+.enviar-comentario-btn {
+    border: none;
+    outline: none;
+    background-color: #383838;
+    color: #fff;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    border-radius: 3px;
+    align-self: flex-end;
+    transition: background-color 0.3s;
+}
+
+.enviar-comentario-btn:hover {
+    background-color: var(--filtroBotao);
+    cursor: pointer;
+}
+
+.comentsSection {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 3px 3px #33333346;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.comentario-card {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: box-shadow 0.2s;
+}
+
+.comentario-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.comentario-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.comentario-nome {
+    font-weight: bold;
+    color: var(--cardTitulo, #383838);
+    font-size: 1.1em;
+}
+
+.comentario-data {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.comentario-texto {
+    color: #444;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+
+    .cardSection {
+        padding: 0 5px;
+    }
+
+    .produto {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .interface,
+    .content {
+        max-width: 95%;
+        padding-right: 0;
+    }
+
+    .buttons {
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .comentario-section {
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .enviar-comentario-btn {
+        align-self: center;
+    }
+
+    .comentsSection {
+        padding: 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .comentario-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,41 @@
+
+/* carrosel */
+
+#carousel {
+    max-width: 1300px;
+    width: 90%;
+    margin: auto;
+    margin-block: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    position: relative;
+    bottom: 50px;
+}
+
+.setaCarousel {
+   width: 32px;
+}
+
+
+#carouselExampleIndicators {
+    max-width: 1300px;
+    width: 90%;
+}
+
+.carousel-inner {
+    max-width: 1300px;
+    width: 100%;
+}
+
+.carousel-item {
+    max-width: 1300px;
+    width: 100%;
+}
+
+.carousel-item img {
+    max-width: 1300px;
+    width: 90%;
+}

@@ -1,0 +1,114 @@
+body {
+    background-color: #CCC;
+}
+
+.historicoCompras {
+    max-width: 1240px;
+    width: 100%;
+    min-height: 700px;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-family: "Poppins", sans-serif;
+    background-color: transparent;
+    gap: 15px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.card {
+    width: 18rem; 
+    height: auto;
+    border-radius: 8px; 
+    overflow: hidden; 
+    background-color: #f7f7f7; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ddd; 
+    transition: all 0.2s ease;
+    color: #333; 
+}
+
+.card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.card__header {
+    padding: 10px 15px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    text-align: center;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: white; 
+}
+
+.card__body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white; 
+}
+
+.card__item {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex; 
+    justify-content: space-between;
+    color: #666;
+}
+
+.card__value {
+    font-weight: 700;
+    color: #333;
+}
+
+.card--andamento .card__header {
+    background-color: #5d9cec;
+}
+
+.card--confirmada {
+    border-color: #27ae60; 
+}
+.card--confirmada .card__header {
+    background-color: #2ecc71; 
+    box-shadow: 0 5px 0 -2px #27ae60; 
+}
+
+.card--cancelada {
+    border-color: #c0392b; 
+}
+.card--cancelada .card__header {
+    background-color: #e74c3c; 
+    box-shadow: 0 5px 0 -2px #c0392b; 
+}
+.card--cancelada .card__body {
+    background-color: #fafafa;
+}
+.card--cancelada .card__item,
+.card--cancelada .card__value {
+    color: #a0a0a0; 
+}
+.card--cancelada .card__value {
+    text-decoration: line-through; 
+}
+
+@media (max-width: 600px) {
+    .historicoCompras {
+        justify-content: center;
+        padding: 10px;
+    }
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}

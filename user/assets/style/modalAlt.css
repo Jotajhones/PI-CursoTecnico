@@ -1,0 +1,41 @@
+.modal-alt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  padding: 15px 30px;
+  min-width: 250px;
+  border-radius: 12px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out, visibility 0.4s ease-out;
+  z-index: 1000;
+}
+
+.modal-alt-mensagem {
+  margin: 0;
+}
+
+.modal-alt.ativo {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+.modal-alt.sucesso {
+  background-color: rgba(46, 204, 113, 0.9);
+  border: 1px solid rgba(39, 174, 96, 0.9);
+}
+
+.modal-alt.erro {
+  background-color: rgba(231, 76, 60, 0.9);
+  border: 1px solid rgba(192, 57, 43, 0.9);
+}

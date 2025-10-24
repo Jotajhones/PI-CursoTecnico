@@ -1,0 +1,358 @@
+/* main Vendas*/
+body {
+    background-color: #CCC;
+}
+
+/* ======================================================= */
+/* REGRAS DE DESKTOP (WIDTH > 900PX) - PADRÃO FINALIZADO */
+/* ======================================================= */
+
+.mainVendas {
+    display: grid;
+    grid-template-columns: 1.2fr 2.8fr;
+    gap: 10px;
+    max-width: 1440px; 
+    width: 100%;
+    margin: 10px auto 0px auto;
+    height: calc(100vh - 70px);
+    color: var(--corFonte);
+    background-color: white;
+}
+
+.mainVendaCompleta {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px; /* ALTERADO: NOVA LARGURA MÁXIMA PARA O MAIN */
+    width: 100%;
+    margin: 10px auto;
+    color: var(--corFonte);
+    background-color: white;
+    border-radius: 8px;
+}
+
+.cardVendaCompleta {
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--fundo2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--corFonte);
+    width: 100%; /* GARANTE 100% DE LARGURA DENTRO DO mainVendaCompleta */
+}
+
+/* HEADER: Layout de 3 colunas para desktop (> 900px) */
+.cardVendasHeader {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    word-wrap: nowrap;
+    margin: auto auto 20px auto;
+    width: 100%;
+}
+
+.cardVendasHeader span {
+    font-size: 14pt; 
+    color: var(--corFonte);
+    width: 350px; 
+}
+
+.listaProdutos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ITENS: Layout de linha para desktop (> 768px) */
+.produtoItem-cliente {
+    position: relative;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: dashed 1px black;
+    padding: 15px 0;
+    padding-right: 30px;
+    margin-bottom: 10px;
+    gap: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.produtoItem-cliente.removendo {
+    opacity: 0;
+    height: 0 !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.produtoDescricao {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.infoPrincipal-cliente {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.imagemProduto-cliente {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    flex-shrink: 0;
+    border: 1px solid #eee;
+}
+
+.produtoNome-destaque strong {
+    font-size: 1.1em;
+    color: var(--corFonte);
+    font-weight: 600;
+}
+
+.controleQuantidade {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.btnControle {
+    background-color: #f8f8f8;
+    border: none;
+    color: #555;
+    font-size: 1.2em;
+    width: 30px;
+    height: 35px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    line-height: 1;
+}
+
+.btnControle:hover {
+    background-color: #ddd;
+}
+
+.inputQuantidadeVenda {
+    width: 40px;
+    height: 35px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    -moz-appearance: textfield;
+}
+
+.inputQuantidadeVenda::-webkit-outer-spin-button,
+.inputQuantidadeVenda::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btnRemoverItem {
+    position: absolute;
+    top: 0px; 
+    right: 0;
+    background: none;
+    border: 1px solid #cc0000;
+    border-radius: 50%;
+    color: #cc0000;
+    font-size: 1em;
+    width: 25px;
+    height: 25px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+.btnRemoverItem:hover {
+    opacity: 1;
+    background-color: #ffcccc;
+}
+
+.produtoValores-cliente {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    min-width: 150px;
+    margin-left: auto;
+}
+
+.produtoPrecoUnitario {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 2px;
+    order: 1;
+}
+
+.produtoSubtotal-destaque {
+    font-size: 1.3em;
+    color: #1b0935;
+    font-weight: 700;
+    order: 2;
+}
+
+.produtoSubtotal-destaque strong {
+    font-weight: inherit;
+}
+
+.produtoItem {
+    text-align: right;
+    margin-right: 15px;
+    font-size: 1.5em;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 20px; 
+}
+
+button abbr {
+    text-decoration: none;
+}
+
+.buttons button {
+    max-width: 240px; 
+    width: 100%;
+    background-color: #1b0935;
+    color: white;
+    font-size: large; 
+    padding: 7px; 
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-block: 10px;
+}
+
+.buttons button:hover {
+    opacity: 80%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons .cancelar {
+    background-color: #c0392b;
+}
+
+.buttons .comprar {
+    background-color: #27ae60;
+    font-weight: bold;
+}
+
+.buttons .cancelar:hover,
+.buttons .comprar:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ======================================================= */
+/* MEDIA QUERY para TELAS MÉDIAS E PEQUENAS (WIDTH <= 900px) */
+/* ======================================================= */
+
+@media (max-width: 900px) {
+    
+    .mainVendas {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        margin: 5px auto;
+        height: auto;
+    }
+
+    .mainVendaCompleta {
+        max-width: 100%;
+        margin: 5px;
+    }
+
+    .cardVendaCompleta {
+        padding: 10px; 
+    }
+
+    /* CORREÇÃO DO HEADER (EM PILHAMENTO) */
+    .cardVendasHeader {
+        display: flex;
+        flex-direction: column; 
+        gap: 5px;
+        margin: 0 auto 10px auto;
+        width: 100%;
+    }
+
+    .cardVendasHeader span {
+        font-size: 13pt;
+        width: 100%;
+    }
+    
+    /* AJUSTES NOS ITENS (começa a empilhar) */
+    .produtoItem-cliente {
+        flex-direction: column;
+        padding: 10px 0;
+        padding-right: 20px;
+        gap: 10px;
+    }
+
+    .produtoValores-cliente {
+        min-width: 100px;
+        align-self: flex-start;
+        margin-left: 0;
+    }
+
+    /* CORREÇÃO DOS BOTÕES */
+    .buttons {
+        justify-content: space-around; 
+        flex-wrap: wrap; 
+        gap: 10px; 
+    }
+
+    .buttons button {
+        max-width: 45%; 
+        font-size: medium; 
+        padding: 5px; 
+        margin-block: 5px;
+    }
+}
+
+/* ======================================================= */
+/* MEDIA QUERY para CELULARES (WIDTH <= 300px) - Adaptação extrema */
+/* ======================================================= */
+
+@media (max-width: 300px) {
+    
+    .cardVendaCompleta {
+        padding: 5px;
+    }
+
+    .cardVendasHeader span {
+        font-size: 10pt;
+    }
+
+    .infoPrincipal-cliente {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .buttons button {
+        max-width: 95%; 
+        font-size: small;
+    }
+}

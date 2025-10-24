@@ -1,0 +1,99 @@
+.perfil {
+    max-width: 1366px;
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+}
+
+.forms {
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formsUsers {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+}
+
+.formsUsers h1 {
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.perfil input {
+    max-width: 500px;
+    width: 100%;
+    padding: 7px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: var(--inputFundo);
+    margin-bottom: 20px;
+}
+
+.perfil label {
+    float: inline-start;
+    margin-right: 10px;
+}
+
+.select {
+    margin-bottom: 15px;
+}
+
+/* Botão */
+.buttons button {
+    max-width: 340px;
+    width: 100%;
+    background-color: #1b0935;
+    color: white;
+    font-size: large;
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-block: 10px;
+}
+
+.buttons button:hover {
+    opacity: 80%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Container BG */
+#LoginBackground {
+    background-color: #1b0935;
+    background-image: url('../img/fundoroxo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 32pt;
+}
+
+#bordaBG {
+    background-color: transparent;
+    width: 90%;
+    height: 90%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#LoginBackground p {
+    width: 90%;
+}

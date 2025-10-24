@@ -1,0 +1,303 @@
+
+
+/* Titulo */
+
+.titulo {
+    width: calc(100% - 5px);
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 20px;
+}
+
+.tituloTexto {
+    height: 290px;
+    width: 600px;
+    background-image: url('../img/lançamentos-titulo.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    font-family: var(--blankRiver);
+    font-size: 86pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo hr {
+    width: 100%;
+    border: dashed 2px;
+    position: relative;
+    bottom: 80px;
+}
+
+
+/* BANNER INFERIOR */
+
+#bannerInferior {
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    bottom: 50px;
+}
+
+#bannerInferior img {
+    width: 100%;
+}
+
+/* BUttons Banner */
+#bannerCarta {
+    max-width: 1300px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    position: relative;
+    bottom: 50px;
+    gap: 10px;
+}
+
+.cartaBannerInferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--homeCardPropaganda);
+    color: var(--homeCardFonte);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: var(--blankRiver);
+    font-size: larger;
+    max-width: 300px;
+    width: 100%;
+    height: 100px;
+}
+
+.cartaBannerInferior p {
+    margin-bottom: 0px;
+}
+
+.cartaBannerInferior img {
+    width: 80px;
+}
+
+#spanCardBanner {
+    text-decoration: underline 2px;
+}
+
+/* MAIN */
+
+#main {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    bottom: 50px;
+}
+
+/* linha pontilhada */
+
+#linhaPontilhada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-block: 20px;
+}
+
+#linhaPontilhada hr {
+    width: 100%;
+    border: dashed 2px;
+}
+
+/* Aside */
+
+#aside {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--poppins);
+}
+
+#asideLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 500px;
+    padding: 10px;
+    font-size: larger;
+    border-right: dashed 2px;
+}
+
+#asideLeftContent {
+    width: 80%;
+}
+
+#asideLeft h2 {
+    font-size: 32pt;
+    margin-bottom: 10px;
+}
+
+#cardStores {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#linha-pontilhada-vertical {
+    max-height: 600px;
+    height: 100%;
+}
+
+#cardStores img {
+    max-width: 200px;
+    width: 100%;
+}
+
+#asideRigth {
+    max-width: 500px;
+    width: 50%;
+}
+
+#asideRigth #asideRigthImg {
+    max-width: 500px;
+    width: 100%;
+}
+
+/* RESPOSINVIDADE */
+
+@media(max-width:960px) {
+    #main {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+    }
+
+    #cardStores {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media(max-width:800px) {
+    #aside {
+        flex-direction: column;
+    }
+
+    #asideLeft {
+        border-right: none;
+        width: 100%;
+        border-bottom: dashed 2px;
+    }
+
+    #cardStores {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media(max-width: 750px) {
+    #bannerCarta {
+        width: 95%;
+        height: fit-content;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:690px) {
+    .mainCardColumn {
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:630px) {
+    #main {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+    }
+}
+
+@media(max-width:600px) {
+    .tituloTexto {
+        max-width: 300px;
+        background-image: url('../img/lançamentos-titulo-mobile.png');
+        background-position: 50% 50%;
+        background-size: contain;
+        font-size: 60pt;
+    }
+}
+
+@media(max-width:500px) {
+
+    #aside {
+        position: relative;
+        bottom: 320px;
+    }
+
+    #main,
+    #linhaPontilhada {
+        position: relative;
+        bottom: 280px;
+    }
+
+    #tituloDesconto {
+        bottom: 180px;
+    }
+
+    #carousel,
+    #bannerInferior {
+        bottom: 150px;
+    }
+
+    #bannerCarta {
+        margin-top: 0px;
+        bottom: 130px;
+    }
+
+    .titulo hr {
+        bottom: 100px;
+    }
+
+    .titulo {
+        position: relative;
+        bottom: 50px;
+    }
+}
+
+@media(max-width:460px) {
+    #cardStores {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mainCardContenColumnImg {
+        display: none;
+    }
+}
